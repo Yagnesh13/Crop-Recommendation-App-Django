@@ -96,7 +96,7 @@ def home(request):
 
     x=[22.42776057	,93.91722423,	5.893490899,	102.7230739]
     #get values from firebase
-    #x=db.child('-MVa-ggAobRLkTxsygMe/op').get().val()
+    #x=db.child('firebase tree').get().val()
     #y=db.child('1').get().val()
     #z=db.child('2').get().val()
     #a=db.child('3').get().val()
@@ -107,7 +107,6 @@ def home(request):
     lab,npk=getpre(x)
     cpredi=labelslist[int(lab)]
     pricess=msp[cpredi]['price']
-    #print(pricess)
     return render(request,'home.html',{'result':labelslist[int(lab)],'N':npk[0][0], 
     'P':npk[0][1], 'K':npk[0][2], 'result1':x, 'cprices':pricess, 'temp':d1})
 
@@ -143,23 +142,19 @@ def crops(request):
     'c3':['banana', 'mango', 'grapes', 'watermelon','muskmelon'],
     'c4': ['apple', 'orange', 'papaya', 'coconut', 'cotton'],
     'c5':['jute','coffee']}
-    #con={msp[cropname]}
     return render(request,'crop.html',cropname)
 
 def croppro(request,x):
-    #x=str(request.POST["num1"])
-    #x='rice'
-    #print(x)
     con=dict(msp[x])
     con['name']=x
     return render(request,'cropro.html',con)
 
 def getpre(para):#temp,humidity,rainfall,ph):
     import pickle
-    model = pickle.load(open("C:/Users/yagne/Desktop/anaconda/croppred/croplabel.pkl", "rb"))
+    model = pickle.load(open("croplabel.pkl", "rb"))
     labpre = model.predict([para])
 
-    model2=pickle.load(open("C:/Users/yagne/Desktop/anaconda/croppred/cropNPK.pkl", "rb"))
+    model2=pickle.load(open("cropNPK.pkl", "rb"))
 
     para.append(int(labpre))
     npkpre=model2.predict([para])
