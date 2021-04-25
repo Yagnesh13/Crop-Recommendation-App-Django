@@ -1,0 +1,23 @@
+Sl.No,Type of Crop,Crop,Increase/Decrease in MSP - 2014-15 over 2013-14,Increase/Decrease in MSP - 2015-16 over 2014-15,Increase/Decrease in MSP - 2016-17 over 2015-16,Increase/Decrease in MSP - 2017-18 over 2016-17,Increase/Decrease in wholesale price - 2014-15 over 2013-14,Increase/Decrease in wholesale price - 2015-16 over 2014-15,Increase/Decrease in wholesale price - 2016-17 over 2015-16,Increase/Decrease in wholesale price - 2017-18 over 2016-17
+1,Kharif Crop,Paddy,50,50,60,80,56,-86,111,64
+2,Kharif Crop,Jowar,30,40,55,75,315,-70,123,61
+3,Kharif Crop,Bajra,0,25,55,95,-70,95,224,-192
+4,Kharif Crop,Maize,0,15,40,60,-107,111,164,-68
+5,Kharif Crop,Ragi,50,100,75,175,-90,0,535,370
+6,Kharif Crop,Arhar,50,275,425,400,559,2913,-752,-2447
+7,Kharif Crop,Moong,100,250,375,350,1081,836,-1424,-1008
+8,Kharif Crop,Urad,50,275,375,400,902,3433,545,-3523
+9,Kharif Crop,Cotton,50,50,60,160,-525,49,880,-365
+10,Kharif Crop,Groundnut In Shell,0,30,190,230,-82,861,334,-679
+11,Kharif Crop,Sunflower Seed,50,50,150,150,63,97,-108,-336
+12,Kharif Crop,Soyabeen,0,40,175,275,-197,43,-184,-134
+13,Kharif Crop,Sesamum,100,100,300,300,-262,-1292,-691,-304
+14,Kharif Crop,Nigerseed,100,50,175,225,347,2577,-381,-210
+15,Rabi Crops,Wheat,50,75,100,110,-45,115,192,-61
+16,Rabi Crops,Barley,50,75,100,85,62,84,234,-176
+17,Rabi Crops,Gram,75,325,500,400,-182,1386,2705,-1912
+18,Rabi Crops,Masur,125,325,550,300,772,1319,-436,-1821
+19,Rabi Crops,Rapeseed/mustard,50,250,350,300,34,509,104,-312
+20,Rabi Crops,Safflower,50,250,400,400,-716,-47,166,554
+21,Other Crops,Copra,0,300,400,550,4409,-2122,-1789,4237
+22,Other Crops,Jute,100,300,500,300,234,1194,377,-996
