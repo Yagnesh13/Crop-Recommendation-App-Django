@@ -13,11 +13,12 @@ import requests
 import pyrebase 
 
 '''fireConfig={
-    firebase information
+    your firebase information here
+    delete the string apostrophes if using firebase
 }
 fire=pyrebase.initialize_app(fireConfig)'''
 
-data=pd.read_csv("C:/Users/yagne/Desktop/anaconda/croppred/cpdata.csv")
+data=pd.read_csv("cpdata.csv")
 d1=list(data["temperature"][:30])
 dicti={'rice': 0,'maize': 1,'chickpea': 2,'kidneybeans': 3,'pigeonpeas': 4,'mothbeans': 5,'mungbean': 6,'blackgram': 7,
  'lentil': 8,'pomegranate': 9,'banana': 10,'mango': 11,'grapes': 12,'watermelon': 13,'muskmelon': 14,'apple': 15,
@@ -156,8 +157,6 @@ def croppro(request,x):
 def getpre(para):#temp,humidity,rainfall,ph):
     import pickle
     model = pickle.load(open("C:/Users/yagne/Desktop/anaconda/croppred/croplabel.pkl", "rb"))
-    #scaled = pickle.load(open("scaler.sav", "rb"))
-    #prediction = model.predict([[temp,humidity,rainfall,ph]])
     labpre = model.predict([para])
 
     model2=pickle.load(open("C:/Users/yagne/Desktop/anaconda/croppred/cropNPK.pkl", "rb"))
@@ -165,38 +164,5 @@ def getpre(para):#temp,humidity,rainfall,ph):
     para.append(int(labpre))
     npkpre=model2.predict([para])
     return labpre,npkpre
-
-def rice(request):
-    context=dict(msp['rice'])
-    context['name']='rice'
-    return render(request,'rice.html', context)
-
-def cotton(request):
-    context=dict(msp['cotton'])
-    context['name']='cotton'
-    context['ylab']=months
-    
-    return render(request,'cotton.html',context)
-
-def maize(request):
-    context=dict(msp['maize'])
-    context['name']='maize'
-    return render(request,'maize.html', context)
-
-def mungbean(request):
-    context=dict(msp['mungbean'])
-    context['name']='mungbean'
-    return render(request,'mungbean.html', context)
-
-def lentil(request):
-    context=dict(msp['lentil'])
-    context['name']='lentil'
-    return render(request,'lentil.html', context)
-
-def jute(request):
-    context=dict(msp['jute'])
-    context['name']='jute'
-    return render(request,'jute.html', context)
-
 
 
