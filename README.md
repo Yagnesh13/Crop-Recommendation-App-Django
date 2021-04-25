@@ -1,8 +1,11 @@
 # Crop-Recommendation-App-Django
 This app predicts the crop based on facotrs like rainfall, temperature, humidity and pH of the soil.
+
 Dataset link: https://www.kaggle.com/atharvaingle/crop-recommendation-dataset 
 
 Rest of the data can be found at: data.gov.in 
+
+For linking firebase with django: https://youtube.com/playlist?list=PLs3IFJPw3G9Jwaimh5yTKot1kV5zmzupt 
 
 ![1](https://user-images.githubusercontent.com/55800448/116005812-313d4880-a626-11eb-8f15-9bc3c7592dc1.PNG)
 
