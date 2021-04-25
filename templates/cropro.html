@@ -1,0 +1,56 @@
+<h1>Crop info</h1>
+<body>
+    Crop:{{name}}
+    <br>
+    MSP:{{MSP2019}}
+    <br>
+    WholesalePrice Sept 2019: {{Wholesep19}}
+    <br>
+    WholesalePrice Oct 2019: {{whooct19}}
+
+    Change in MSP: {{incmsp}} 
+    {% if incmsp >= 0 %}
+        <img src= "https://www.freeiconspng.com/thumbs/green-arrow-png/green-arrow-png-27.png" height="15" width="18">
+    {% else %}
+        <img src= "https://mpng.subpng.com/20180204/vuq/kisspng-line-triangle-point-red-down-arrow-png-photos-5a77bb7a620b24.5228843115177962184016.jpg" height="15" width="25">
+    {% endif %}
+     <br>
+     Change in WholesalePrice: {{incwho}}  
+    {% if incwho >= 0 %}
+        <img src= "https://www.freeiconspng.com/thumbs/green-arrow-png/green-arrow-png-27.png" height="15" width="18">
+    {% else %}
+        <img src= "https://mpng.subpng.com/20180204/vuq/kisspng-line-triangle-point-red-down-arrow-png-photos-5a77bb7a620b24.5228843115177962184016.jpg" height="15" width="15">
+    {% endif %} 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  
+      <div class="chartjs-wrapper col s7 offset-s1">
+      <canvas id="chartjs-0" class="chartjs" width="undefined" height="undefined" style=" width:800px !important;
+    height:400px !important;">
+      </canvas>
+    <script>
+      new Chart(
+      document.getElementById("chartjs-0"),{
+      "type":"line",
+      "data":{
+          "labels":['Sept17','Oct17', 'Nov17', 'Dec17','Jan18', 'Feb18', 'Mar18', 'Apr18', 
+          'May18', 'Jun18', 'Jul18','Aug18', 'Sept18','Oct18','Nov18','Dec18'],
+          "datasets":[{
+              "label":"Current Price",
+              "data":{{price}},
+      "fill":false,"borderColor":"rgb(75, 192, 192)","lineTension":0.1
+    }]
+    },
+      "options":{ responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+          yAxes: [{
+              display: true,
+              ticks: {
+                  suggestedMin: 1000,
+                  stepSize : 100
+              }
+          }]
+      }}});</script>
+    </div>
+</body>

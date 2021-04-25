@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+
+  <h1 style="margin-top: 70px; margin-bottom: 10px">Crops Information</h1>
+<body style="margin-top: 70px; margin-bottom: 10px">
+<table>
+  <tr>
+{% for crop in c1 %}
+<td>
+  
+    <a href="{% url 'cropro' crop %}" style="color: #000000">
+      <span style="background: rgb(190, 190, 190); width: 100px;margin-left:60px;margin-bottom:50px; display:block;text-align:center">
+        {{ crop }}</span> 
+  </a> 
+</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for crop in c2 %}
+<td>
+  
+    <a href="{% url 'cropro' crop %}" style="color: #000000">
+      <span style="background: rgb(190, 190, 190); width: 100px;margin-left:60px;margin-bottom:50px; display:block;text-align:center">
+        {{ crop }}</span>
+  </a>
+  
+</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for crop in c3 %}
+<td>
+  
+    <a href="{% url 'cropro' crop %}" style="color: #000000">
+          <span style="background: rgb(190, 190, 190); width: 100px;margin-left:60px;margin-bottom:50px; display:block;text-align:center">
+        {{ crop }}</span>    
+  </a>
+ 
+</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for crop in c4 %}
+<td>
+  
+    <a href="{% url 'cropro' crop %}" style="color: #000000">
+          <span style="background: rgb(190, 190, 190); width: 100px;margin-left:60px;margin-bottom:50px; display:block;text-align:center">
+        {{ crop }}</span>    
+  </a>
+</td>
+{% endfor %}
+</tr>
+
+<tr>
+  {% for crop in c5 %}
+  <td>
+    
+      <a href="{% url 'cropro' crop %}" style="color: #000000">
+            <span style="background: rgb(190, 190, 190); width: 100px;margin-left:60px;margin-bottom:50px; display:block;text-align:center">
+          {{ crop }}</span>    
+    </a>
+  </td>
+  {% endfor %}
+  </tr>
+</table>
+</body>
+{% endblock content %}
